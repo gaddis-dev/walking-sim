@@ -1,15 +1,15 @@
 {
-    "name": "2d-walking-simulator",
-    "version": "1.0.0",
-    "description": "A simple 2D walking simulator using Phaser.js.",
-    "scripts": {
-      "start": "parcel public/index.html"
-    },
-    "dependencies": {
-      "phaser": "^3.60.0"
-    },
-    "devDependencies": {
-      "parcel": "^2.9.3"
-    }
+  "name": "2d-walking-simulator",
+  "version": "1.0.0",
+  "description": "A simple 2D walking simulator using Phaser.js.",
+  "scripts": {
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "dependencies": {
+    "phaser": "^3.60.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
 }
-  
