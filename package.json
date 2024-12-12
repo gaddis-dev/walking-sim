@@ -3,8 +3,7 @@
     "version": "1.0.0",
     "description": "A simple 2D walking simulator using Phaser.js.",
     "scripts": {
-      "start": "parcel public/index.html --open",
-      "build": "parcel build public/index.html"
+      "start": "parcel public/index.html"
     },
     "dependencies": {
       "phaser": "^3.60.0"
