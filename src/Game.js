@@ -16,4 +16,6 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
+console.log('Phaser Game initialized:', game); // Log initialization
+
 export default game;

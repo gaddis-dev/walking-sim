@@ -6,6 +6,7 @@ class MainScene extends Phaser.Scene {
     }
 
     create() {
+        console.log('Creating ground and player'); // Log creation
         // Create ground (background)
         this.ground = this.add.graphics();
         this.ground.fillStyle(0x87ceeb, 1); // Light blue color
@@ -14,19 +15,17 @@ class MainScene extends Phaser.Scene {
         // Create the player as a rectangle
         this.player = this.add.rectangle(400, 300, 32, 48, 0xff0000); // Red rectangle
         this.physics.add.existing(this.player); // Enable physics on the player
+        this.player.setCollideWorldBounds(true); // Ensure player doesn’t move outside bounds
 
-        // Set collision boundaries
-        this.player.body.setCollideWorldBounds(true);
+        console.log('Player and ground created'); // Log confirmation
 
-        // Input handling
+        // Add cursor keys for movement
         this.cursors = this.input.keyboard.createCursorKeys();
     }
 
     update() {
-        // Reset player velocity
-        this.player.body.setVelocity(0);
+        this.player.body.setVelocity(0); // Reset velocity each frame
 
-        // Movement logic
         if (this.cursors.left.isDown) {
             this.player.body.setVelocityX(-150);
         } else if (this.cursors.right.isDown) {
